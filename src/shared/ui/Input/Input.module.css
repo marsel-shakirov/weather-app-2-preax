@@ -1,4 +1,4 @@
-.headerInput {
+.header-input {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -15,11 +15,11 @@
 	transition: 0.3s ease;
 }
 
-.headerInput:hover {
+.header-input:hover {
 	background: rgb(218, 218, 218, 0.8);
 }
 
-.headerInput:active {
+.header-input:active {
 	background: var(--search-input--active);
 }
 

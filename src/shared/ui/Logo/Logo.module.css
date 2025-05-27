@@ -1,12 +1,12 @@
-.headerLink {
+.header-link {
 	display: flex;
 	align-items: end;
 	height: 48px;
 }
-.headerLink:hover {
+.header-link:hover {
 	opacity: 0.8;
 }
-.headerLink:active {
+.header-link:active {
 	opacity: 0.6;
 }
 

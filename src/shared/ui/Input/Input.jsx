@@ -1,12 +1,15 @@
 import styles from './Input.module.css';
 
-export const Input = () => {
+export const Input = ({ id, name, onInput, value }) => {
 	return (
 		<input
 			type="text"
-			className={styles.headerInput}
+			value={value}
+			name={name}
+			onInput={onInput}
+			id={id}
+			className={styles['header-input']}
 			placeholder="Поиск по городу"
-			aria-label="Search by city"
 		/>
 	);
 };

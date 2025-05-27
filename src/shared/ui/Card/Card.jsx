@@ -20,7 +20,7 @@ export const Card = ({
 				<figcaption className={styles.cardTitle}>{title}</figcaption>
 
 				<img
-					src={`./cards-icon/${icon}.svg`}
+					src={`${process.env.PUBLIC_URL}/images/cards-icon/${icon}.svg`}
 					alt="icon"
 					className={styles.cardIcon}
 					width="32"

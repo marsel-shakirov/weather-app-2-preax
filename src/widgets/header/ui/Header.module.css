@@ -6,14 +6,14 @@
 }
 
 /* SEARCH-INPUT */
-.inputWrapper {
+.input-wrapper {
 	position: relative;
 	width: 506px;
 	height: 48px;
 	border-radius: 8px;
 }
 
-.searchIcon {
+.search-icon {
 	background: url('../../../shared/assets/images/svg/input/search-icon.svg')
 		no-repeat;
 	width: 24px;
@@ -24,19 +24,20 @@
 	cursor: pointer;
 	z-index: 10;
 	opacity: 0.8;
+	border: none;
 }
 
-.searchIcon:hover {
+.search-icon:hover {
 	opacity: 1;
 }
 
-.has-text .searchIcon {
+.has-text .search-icon {
 	background: url('../../../shared/assets/images/svg/input/close-icon.svg')
 		no-repeat;
 }
 
 @media screen and (max-width: 1279px) {
-	.inputWrapper {
+	.input-wrapper {
 		float: right;
 	}
 }
@@ -45,13 +46,13 @@
 	.header {
 		padding: 24px;
 	}
-	.inputWrapper {
+	.input-wrapper {
 		width: 601px;
 	}
 }
 
 @media screen and (max-width: 885px) {
-	.inputWrapper {
+	.input-wrapper {
 		width: 483px;
 	}
 }
@@ -60,11 +61,11 @@
 	.header {
 		padding: 16px;
 	}
-	.inputWrapper {
+	.input-wrapper {
 		width: 409px;
 		height: 32px;
 	}
-	.searchIcon {
+	.search-icon {
 		width: 16px;
 		height: 16px;
 		top: 8px;
@@ -75,7 +76,7 @@
 }
 
 @media screen and (max-width: 639px) {
-	.inputWrapper {
+	.input-wrapper {
 		width: 263px;
 		height: 32px;
 	}
