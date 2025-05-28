@@ -6,7 +6,7 @@ import styles from './MainPage.module.css';
 export const MainPage = () => {
 	return (
 		<main>
-			<section className={styles.weatherToday}>
+			<section className={styles['weather-today']}>
 				<CityCard />
 				<CardList />
 			</section>

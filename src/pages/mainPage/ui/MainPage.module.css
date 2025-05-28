@@ -1,4 +1,4 @@
-.weatherToday {
+.weather-today {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-	.weatherToday {
+	.weather-today {
 		display: flex;
 		flex-direction: column;
 		height: auto;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 767px) {
-	.weatherToday {
+	.weather-today {
 		padding: 16px;
 		gap: 32px;
 	}

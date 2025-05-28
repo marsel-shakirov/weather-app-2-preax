@@ -136,7 +136,8 @@
 		height: 16px;
 		top: 8px;
 		right: 12px;
-		background: url('../images/svg/input/search-icon--mini.svg') no-repeat;
+		background: url('/public/assets/images/svg/input/search-icon--mini.svg')
+			no-repeat;
 	}
 	.weatherToday {
 		padding: 16px;

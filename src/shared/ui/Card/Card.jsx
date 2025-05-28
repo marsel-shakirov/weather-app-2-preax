@@ -14,54 +14,63 @@ export const Card = ({
 	param,
 	time,
 }) => {
+	const getMaskStyle = position => ({
+		WebkitMaskImage: `radial-gradient(
+      circle at ${position},
+      transparent 6px,
+      rgba(218, 218, 218, 0.4) 6px
+    )`,
+		maskImage: `radial-gradient(
+      circle at ${position},
+      transparent 6px,
+      rgba(218, 218, 218, 0.4)  6px
+    )`,
+	});
+
+	const maskStyle = getMaskStyle(maskPosition);
+
 	return (
 		<li className={styles.card}>
-			<figure className={styles.cardContent}>
-				<figcaption className={styles.cardTitle}>{title}</figcaption>
+			<figure className={styles['card-content']}>
+				<figcaption className={styles['card-title']}>{title}</figcaption>
 
 				<img
-					src={`${process.env.PUBLIC_URL}/images/cards-icon/${icon}.svg`}
+					src={`${process.env.PUBLIC_URL}/assets/images/cards-icon/${icon}.svg`}
 					alt="icon"
-					className={styles.cardIcon}
+					className={styles['card-icon']}
 					width="32"
 					height="32"
 				/>
-				<span className={styles.cardValue}>{value}</span>
+				<span className={styles['card-value']}>{value}</span>
 			</figure>
 
-			<div className={styles.cardFooter}>
-				{range ? (
+			<div className={styles['card-footer']}>
+				{range && (
 					<div
-						className={`${styles.progressBar} ${
-							pressure ? styles.progressBarPressure : ''
+						className={`${styles['progress-bar']} ${
+							pressure ? styles['progress-bar--pressure'] : ''
 						}`}
 					>
 						<div
-							className={styles.progressBarBar}
-							style={{
-								maskImage: `radialGradient(
-									circle at ${maskPosition},
-									transparent 6px,
-									transparent 6px,
-									#d3d3d3 6px,
-								)`,
-							}}
+							className={styles['progress-bar__bar']}
+							style={maskStyle}
 						></div>
-						<span
-							className={styles.progressBarEllipse}
-							style={{ left: `${leftValue}` }}
-						></span>
+						{leftValue !== undefined && (
+							<span
+								className={styles['progress-bar__ellipse']}
+								style={{ left: `${leftValue}` }}
+							></span>
+						)}
 					</div>
-				) : (
-					''
 				)}
+
 				{humidity ? (
-					<div className={styles.cardFooterHumidity}>
-						<span className={styles.cardFooterFrom}>{minParams}</span>
-						<span className={styles.cardFooterTo}>{maxParams}</span>
+					<div className={styles['card-footer--humidity']}>
+						<span className={styles['card-footer__from']}>{minParams}</span>
+						<span className={styles['card-footer__to']}>{maxParams}</span>
 					</div>
 				) : (
-					`${param || ''} ${time || ''}`
+					(param || '') + (time ? ` ${time}` : '')
 				)}
 			</div>
 		</li>

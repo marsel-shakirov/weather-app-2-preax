@@ -14,8 +14,7 @@
 }
 
 .search-icon {
-	background: url('../../../shared/assets/images/svg/input/search-icon.svg')
-		no-repeat;
+	background: url('/public/assets/images/svg/input/search-icon.svg') no-repeat;
 	width: 24px;
 	height: 24px;
 	position: absolute;
@@ -32,8 +31,7 @@
 }
 
 .has-text .search-icon {
-	background: url('../../../shared/assets/images/svg/input/close-icon.svg')
-		no-repeat;
+	background: url('/public/assets/images/svg/input/close-icon.svg') no-repeat;
 }
 
 @media screen and (max-width: 1279px) {
@@ -70,7 +68,7 @@
 		height: 16px;
 		top: 8px;
 		right: 12px;
-		background: url('../../../shared/assets/images/svg/input/search-icon--mini.svg')
+		background: url('/public/assets/images/svg/input/search-icon--mini.svg')
 			no-repeat;
 	}
 }

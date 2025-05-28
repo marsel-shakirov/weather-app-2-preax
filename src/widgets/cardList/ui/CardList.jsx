@@ -6,7 +6,7 @@ import styles from './CardList.module.css';
 
 export const CardList = () => {
 	return (
-		<ul className={styles.cardsWrapper} id="cards">
+		<ul className={styles['cards-wrapper']} id="cards">
 			{weatherData.map((card, index) => {
 				let leftValue = '';
 				let maskPosition = '';

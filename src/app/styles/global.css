@@ -29,7 +29,7 @@ body {
 	text-align: center;
 	font-family: var(--font-family);
 	font-variant-numeric: lining-nums;
-	background: url('../images/png/bg-img.png') no-repeat;
+	background: url('/public/assets/images/png/bg-img.png') no-repeat;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
