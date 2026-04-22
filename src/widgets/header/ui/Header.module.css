@@ -1,81 +1,93 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
 }
 
-/* SEARCH-INPUT */
-.input-wrapper {
-	position: relative;
-	width: 506px;
-	height: 48px;
-	border-radius: 8px;
+.form {
+  position: relative;
+  display: flex;
+  flex-basis: 506px;
+  border-radius: 8px;
 }
 
-.search-icon {
-	background: url('/public/assets/images/svg/input/search-icon.svg') no-repeat;
-	width: 24px;
-	height: 24px;
-	position: absolute;
-	right: 16px;
-	top: 15px;
-	cursor: pointer;
-	z-index: 10;
-	opacity: 0.8;
-	border: none;
+.formSubmit {
+  --size: 24px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-neutral-700);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  border: none;
 }
 
-.search-icon:hover {
-	opacity: 1;
+.search,
+.reset {
+  position: absolute;
 }
 
-.has-text .search-icon {
-	background: url('/public/assets/images/svg/input/close-icon.svg') no-repeat;
+.reset {
+  visibility: hidden;
+  opacity: 0.8;
 }
 
-@media screen and (max-width: 1279px) {
-	.input-wrapper {
-		float: right;
-	}
+@media (hover: hover) {
+  .reset:hover {
+    opacity: 1;
+  }
+}
+
+.hasText .reset {
+  visibility: visible;
+}
+
+.hasText .search {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1023px) {
-	.header {
-		padding: 24px;
-	}
-	.input-wrapper {
-		width: 601px;
-	}
+  .header {
+    padding: 24px;
+  }
+
+  .form {
+    flex-basis: 601px;
+  }
 }
 
 @media screen and (max-width: 885px) {
-	.input-wrapper {
-		width: 483px;
-	}
+  .form {
+    flex-basis: 483px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.header {
-		padding: 16px;
-	}
-	.input-wrapper {
-		width: 409px;
-		height: 32px;
-	}
-	.search-icon {
-		width: 16px;
-		height: 16px;
-		top: 8px;
-		right: 12px;
-		background: url('/public/assets/images/svg/input/search-icon--mini.svg')
-			no-repeat;
-	}
+  .header {
+    padding: 16px;
+  }
+
+  .form {
+    flex-basis: 409px;
+  }
+
+  .formSubmit {
+    --size: 16px;
+  }
 }
 
 @media screen and (max-width: 639px) {
-	.input-wrapper {
-		width: 263px;
-		height: 32px;
-	}
+  .form {
+    flex-basis: 263px;
+  }
 }

@@ -11,7 +11,7 @@ export default function insertCards() {
 		},
 		{
 			title: 'Давление',
-			icon: 'barometr',
+			icon: 'barometer',
 			value: '761',
 			value2: 91,
 			minParams: '0%',

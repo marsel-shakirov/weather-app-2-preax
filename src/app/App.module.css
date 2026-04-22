@@ -1,22 +1,23 @@
 .content {
-	max-width: 1120px;
-	height: 860px;
-	backdrop-filter: blur(25px);
-	border-radius: 8px;
-	background: rgba(112, 112, 112, 0.1);
-	margin: 0 auto;
+  flex-grow: 1;
+  max-width: 1120px;
+  min-height: 860px;
+  margin: auto;
+  border-radius: 8px;
+  background: var(--color-neutral-tone600);
+  backdrop-filter: blur(25px);
 }
 
-@media screen and (max-width: 1279px) {
-	.content {
-		max-width: 960px;
-	}
-}
+/* @media screen and (max-width: 1279px) {
+  .content {
+    max-width: 960px;
+  }
+} */
 
-@media screen and (max-width: 1023px) {
-	.content {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-	}
-}
+/* @media screen and (max-width: 1023px) {
+  .content {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+} */

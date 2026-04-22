@@ -1,159 +1,158 @@
 .card {
-	width: 158px;
-	height: 196px;
-	border-radius: 8px;
-	background: rgba(245, 244, 244, 0.4);
-	padding: 16px;
-	display: flex;
-	flex-direction: column;
+  width: 158px;
+  height: 196px;
+  border-radius: 8px;
+  background: rgba(245, 244, 244, 0.4);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CARD-VALUES */
 .card-content {
-	height: 116px;
-	margin-bottom: 16px;
+  height: 116px;
+  margin-bottom: 16px;
 }
 
 .card-title {
-	color: var(--card-color);
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 125%;
-	text-align: center;
-	margin-bottom: 16px;
+  color: var(--color-neutral-900);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  margin-bottom: 16px;
 }
 .card-icon {
-	display: block;
-	width: 32px;
-	height: 32px;
-	margin: 0 auto;
-	margin-bottom: 16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 .card-value {
-	font-family: var(--font-family);
-	font-size: 32px;
-	line-height: 100%;
-	text-align: center;
-	color: var(--card-color);
-	margin-bottom: 16px;
+  font-family: var(--font-family);
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--color-neutral-900);
+  margin-bottom: 16px;
 }
 
 /* card-footer */
 .card-footer {
-	height: 16px;
-	color: var(--card-text-color);
-	font-size: 12px;
-	line-height: 133%;
-	text-align: center;
-	font-family: var(--font-family);
-	font-weight: 400;
-	background-color: transparent;
+  height: 16px;
+  color: var(--card-text-color);
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  background-color: transparent;
 }
 
 .progress-bar {
-	position: relative;
-	border-radius: 5px;
-}
-
-.progress-bar__bar {
-	display: block;
-	width: 100%;
-	height: 8px;
-	transition: opacity 0.2s;
-	overflow: hidden;
-	margin-bottom: 8px;
-	border-radius: 5px;
-	background: rgba(218, 218, 218, 1);
+  position: relative;
 }
 
 .progress-bar--pressure {
-	background: radial-gradient(
-		circle,
-		rgba(84, 84, 84, 0.4),
-		rgba(138, 138, 138, 0.4) 45.123%,
-		rgb(218, 218, 218) 100%,
-		rgba(218, 218, 218, 0.4) 100%
-	);
+  background: radial-gradient(
+    circle,
+    rgba(84, 84, 84, 0.4),
+    rgba(138, 138, 138, 0.4) 45.123%,
+    rgb(218, 218, 218) 100%,
+    rgba(218, 218, 218, 0.4) 100%
+  );
+}
+
+.progress-bar__bar {
+  display: block;
+  width: 100%;
+  height: 8px;
+  transition: opacity 0.2s;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background: rgba(218, 218, 218, 1);
 }
 
 .progress-bar__ellipse {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #f5f4f4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f5f4f4;
 }
 
 .card-footer--humidity {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ---------------------- */
 
 @media screen and (max-width: 1023px) {
-	.card {
-		width: 163px;
-	}
+  .card {
+    width: 163px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.card {
-		width: 128px;
-		height: 148px;
-		padding: 12px;
-	}
+  .card {
+    width: 128px;
+    height: 148px;
+    padding: 12px;
+  }
 
-	.cardContent {
-		height: 86px;
-		margin-bottom: 12px;
-	}
+  .cardContent {
+    height: 86px;
+    margin-bottom: 12px;
+  }
 
-	.cardTitle {
-		font-size: 12px;
-		line-height: 133%;
-		margin-bottom: 12px;
-	}
+  .cardTitle {
+    font-size: 12px;
+    line-height: 133%;
+    margin-bottom: 12px;
+  }
 
-	.cardIcon {
-		width: 24px;
-		height: 24px;
-		margin-bottom: 12px;
-	}
+  .cardIcon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 12px;
+  }
 
-	.cardValue {
-		font-size: 22px;
-	}
+  .cardValue {
+    font-size: 22px;
+  }
 
-	.cardFooter {
-		height: 24px;
-		font-size: 10px;
-	}
+  .cardFooter {
+    height: 24px;
+    font-size: 10px;
+  }
 
-	.progressBar {
-		margin-bottom: 6px;
-	}
+  .progressBar {
+    margin-bottom: 6px;
+  }
 
-	.progressBarBar {
-		height: 6px;
-	}
+  .progressBarBar {
+    height: 6px;
+  }
 
-	.progressBarEllipse {
-		width: 6px;
-		height: 7px;
-		box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
-	}
+  .progressBarEllipse {
+    width: 6px;
+    height: 7px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+  }
 
-	.cardFooterHumidity {
-		font-size: 10px;
-		line-height: 120%;
-	}
+  .cardFooterHumidity {
+    font-size: 10px;
+    line-height: 120%;
+  }
 }
 
 @media screen and (max-width: 639px) {
-	.card {
-		width: 98px;
-	}
+  .card {
+    width: 98px;
+  }
 }

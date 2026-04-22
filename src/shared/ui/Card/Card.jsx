@@ -6,14 +6,12 @@ export const Card = ({
 	value,
 	range,
 	pressure,
-	maskPosition,
-	leftValue,
 	humidity,
-	minParams,
-	maxParams,
 	param,
 	time,
 }) => {
+	const { maskPosition, leftValue } = range || {};
+
 	const getMaskStyle = position => ({
 		WebkitMaskImage: `radial-gradient(
       circle at ${position},
@@ -55,7 +53,7 @@ export const Card = ({
 							className={styles['progress-bar__bar']}
 							style={maskStyle}
 						></div>
-						{leftValue !== undefined && (
+						{leftValue && (
 							<span
 								className={styles['progress-bar__ellipse']}
 								style={{ left: `${leftValue}` }}
@@ -66,8 +64,8 @@ export const Card = ({
 
 				{humidity ? (
 					<div className={styles['card-footer--humidity']}>
-						<span className={styles['card-footer__from']}>{minParams}</span>
-						<span className={styles['card-footer__to']}>{maxParams}</span>
+						<span className={styles['card-footer__from']}>0%</span>
+						<span className={styles['card-footer__to']}>100%</span>
 					</div>
 				) : (
 					(param || '') + (time ? ` ${time}` : '')

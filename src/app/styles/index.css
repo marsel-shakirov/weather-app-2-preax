@@ -1,11 +1,11 @@
-@import url('normalize.css');
+@import url('./normalize.css');
 
-@import url('utils.css');
+@import url('./variables.css');
 
-@import url('variables.css');
+@import url('./utils.css');
 
-@import url('fonts.css');
+@import url('./fonts.css');
 
-@import url('global.css');
+@import url('./global.css');
 
-@import url('responsive.css');
+@import url('./responsive.css');

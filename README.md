@@ -25,6 +25,10 @@ Task 1: Marsel, marsel-shakirov
 
 ## Дебаггинг
 
+1. Конвертировал background image с png в jpg сделал сжатие изображения
+2. Чуть подправил favicon
+
 1. в input search убрал aria-label и связал с label
 2. logo img alt заменил на **Главная страница** и у ссылки убрал aria-label="Home" так как уже есть описание картинки и имя берется оттуда
 3. у формы убрал method="get" используется по умолчанию
+4. убрал опечатки

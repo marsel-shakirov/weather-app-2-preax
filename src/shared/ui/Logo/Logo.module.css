@@ -1,26 +1,27 @@
 .header-link {
-	display: flex;
-	align-items: end;
-	height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
 }
 .header-link:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 .header-link:active {
-	opacity: 0.6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1023px) {
-	.headerLink {
-		display: flex;
-		align-items: center;
-		height: 49px;
-	}
+  .headerLink {
+    display: flex;
+    align-items: center;
+    height: 49px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.headerLink {
-		width: 32px;
-		height: 32px;
-	}
+  .headerLink {
+    width: 32px;
+    height: 32px;
+  }
 }

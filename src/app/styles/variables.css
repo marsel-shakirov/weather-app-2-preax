@@ -1,9 +1,16 @@
 :root {
-	--font-family: 'Raleway', 'Arial', sans-serif;
-	--main-color: #f5f4f4;
-	--card-color: #202020;
-	--card-text-color: #393939;
-	--forecast-text-color: #a6a6a6;
-	--proggress-bar-bg-color: #d3d3d3;
-	--search-input--active: #dadada;
+  --font-family: 'Raleway', 'Arial', sans-serif;
+
+  --color-neutral-tone600: #7070701a;
+  --color-neutral-tone100: #f5f4f466;
+
+  --color-neutral-100: #f5f4f4;
+  --color-neutral-200: #dadada;
+  --color-neutral-600: #707070;
+  --color-neutral-700: #545454;
+  --color-neutral-900: #202020;
+
+  --card-text-color: #393939;
+  --forecast-text-color: #a6a6a6;
+  --progress-bar-bg-color: #d3d3d3;
 }

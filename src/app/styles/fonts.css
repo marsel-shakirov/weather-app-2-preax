@@ -1,17 +1,17 @@
 @font-face {
 	font-family: 'Raleway';
-	src: url('/public/assets/fonts/Raleway-Regular.woff2') format('woff2'),
-		url('/public/assets/fonts/Raleway-Regular.woff') format('woff');
-	font-weight: normal;
+	src: url('../../shared/assets/fonts/Raleway-Regular.woff2') format('woff2'),
+		url('../../shared/assets/fonts/Raleway-Regular.woff') format('woff');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Raleway';
-	src: url('/public/assets/fonts/Raleway-Bold.woff2') format('woff2'),
-		url('/public/assets/fonts/Raleway-Bold.woff') format('woff');
-	font-weight: bold;
+	src: url('../../shared/assets/fonts/Raleway-Bold.woff2') format('woff2'),
+		url('../../shared/assets/fonts/Raleway-Bold.woff') format('woff');
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
