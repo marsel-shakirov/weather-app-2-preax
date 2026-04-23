@@ -1,8 +1,9 @@
 :root {
   --font-family: 'Raleway', 'Arial', sans-serif;
 
-  --color-neutral-tone600: #7070701a;
   --color-neutral-tone100: #f5f4f466;
+  --color-neutral-tone200: #dadada66;
+  --color-neutral-tone600: #7070701a;
 
   --color-neutral-100: #f5f4f4;
   --color-neutral-200: #dadada;

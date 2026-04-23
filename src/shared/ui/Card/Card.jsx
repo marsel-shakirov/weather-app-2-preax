@@ -5,22 +5,12 @@ import styles from './Card.module.css';
 export const Card = (props) => {
   const { title, icon, value, range, pressure, humidity, param, time } = props;
 
-  const { maskPosition, leftValue } = range || {};
+  const percent = 75;
 
-  const getMaskStyle = (position) => ({
-    WebkitMaskImage: `radial-gradient(
-      circle at ${position},
-      transparent 6px,
-      rgba(218, 218, 218, 0.4) 6px
-    )`,
-    maskImage: `radial-gradient(
-      circle at ${position},
-      transparent 6px,
-      rgba(218, 218, 218, 0.4) 6px
-    )`,
-  });
-
-  const maskStyle = getMaskStyle(maskPosition);
+  const progressStyle = {
+    '--progress': `${percent}%`,
+    '--mask-position': `${percent}%`,
+  };
 
   return (
     <li className={styles.card}>
@@ -39,11 +29,10 @@ export const Card = (props) => {
 
       <div className={styles.cardFooter}>
         {range && (
-          <div className={clsx(styles, 'progressBar', { progressBarPressure: pressure })}>
-            <div className={styles.progressBarBar} style={maskStyle}></div>
-            {leftValue && (
-              <span className={styles.progressBarEllipse} style={{ left: `${leftValue}` }}></span>
-            )}
+          <div className={styles.progressBar} style={progressStyle}>
+            <div className={styles.progressBarTrack} />
+            <div className={clsx(styles, 'progressBarFill', { pressure })} />
+            <span className={styles.progressBarEllipse}></span>
           </div>
         )}
 
