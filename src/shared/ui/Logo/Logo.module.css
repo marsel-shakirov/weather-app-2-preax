@@ -1,26 +1,46 @@
-.header-link {
-  display: flex;
+.logoHeader {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo {
+  width: 192px;
   height: 48px;
 }
-.header-link:hover {
-  opacity: 0.8;
+
+.mobile {
+  display: none;
+  width: auto;
 }
-.header-link:active {
-  opacity: 0.6;
+
+@media (hover: hover) {
+  .logoHeader:hover {
+    opacity: 0.8;
+  }
 }
 
 @media screen and (max-width: 1023px) {
-  .headerLink {
-    display: flex;
-    align-items: center;
-    height: 49px;
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .logo {
+    width: 54px;
+    height: 48px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .headerLink {
+  .logo {
     width: 32px;
     height: 32px;
   }

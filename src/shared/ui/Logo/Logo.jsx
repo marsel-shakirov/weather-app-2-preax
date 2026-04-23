@@ -1,30 +1,14 @@
+import sprite from 'shared/assets/images/svg/sprite.svg';
+
 import styles from './Logo.module.css';
 
 export const Logo = () => {
-	return (
-		<a href="/" className={styles['header-link']}>
-			<picture className={styles['header-picture']}>
-				<source
-					srcSet={`${process.env.PUBLIC_URL}/assets/images/svg/logo/logo-mobile.svg`}
-					media="(max-width: 767px)"
-					width="32"
-					height="14"
-				/>
-				<source
-					srcSet={`${process.env.PUBLIC_URL}/assets/images/svg/logo/logo-tablet.svg`}
-					media="(max-width: 1023px)"
-					width="54"
-					height="23"
-				/>
-				<img
-					id="header-logo"
-					className={styles['header-logo']}
-					src={`${process.env.PUBLIC_URL}/assets/images/svg/logo/logo-desktop.svg`}
-					alt="Главная страница"
-					width="192"
-					height="31"
-				/>
-			</picture>
-		</a>
-	);
+  return (
+    <a href='/' className={styles.logoHeader} aria-label='Главная страница'>
+      <svg className={styles.logo} aria-hidden='true'>
+        <use href={`${sprite}#logo-desktop`} className={styles.desktop} />
+        <use href={`${sprite}#logo-mobile`} className={styles.mobile} />
+      </svg>
+    </a>
+  );
 };

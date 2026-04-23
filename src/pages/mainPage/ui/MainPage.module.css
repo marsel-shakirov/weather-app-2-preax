@@ -1,27 +1,23 @@
-.weather-today {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	height: 472px;
-	padding: 32px;
-	gap: 16px;
+.weatherToday {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 32px;
 }
 
 @media screen and (max-width: 1023px) {
-	.weather-today {
-		display: flex;
-		flex-direction: column;
-		height: auto;
-		align-items: center;
-		justify-content: start;
-		gap: 48px;
-		padding: 24px;
-	}
+  .weatherToday {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 24px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.weather-today {
-		padding: 16px;
-		gap: 32px;
-	}
+  .weatherToday {
+    gap: 32px;
+    padding: 16px;
+  }
 }

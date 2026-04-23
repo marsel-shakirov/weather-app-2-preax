@@ -32,20 +32,14 @@
   border: none;
 }
 
-.search,
-.reset {
+.reset,
+.search {
   position: absolute;
 }
 
 .reset {
   visibility: hidden;
   opacity: 0.8;
-}
-
-@media (hover: hover) {
-  .reset:hover {
-    opacity: 1;
-  }
 }
 
 .hasText .reset {
@@ -56,11 +50,16 @@
   visibility: hidden;
 }
 
+@media (hover: hover) {
+  .reset:hover {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .header {
     padding: 24px;
   }
-
   .form {
     flex-basis: 601px;
   }
@@ -84,10 +83,16 @@
   .formSubmit {
     --size: 16px;
   }
+
+  .reset,
+  .search {
+    width: var(--size);
+    height: var(--size);
+  }
 }
 
 @media screen and (max-width: 639px) {
   .form {
-    flex-basis: 263px;
+    flex-basis: clamp(263px, 60vw, 409px);
   }
 }

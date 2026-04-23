@@ -12,6 +12,8 @@ export const Header = () => {
   const searchId = useId();
   const inputRef = useRef(null);
 
+  const buttonLabel = inputValue ? 'Очистить поле поиска' : 'Найти город';
+
   const handleInputForm = (event) => {
     setInputValue(event.target.value);
   };
@@ -29,7 +31,7 @@ export const Header = () => {
   };
 
   return (
-    <header className={clsx(styles, 'header')}>
+    <header className={styles.header}>
       <Logo />
       <form onSubmit={handleSubmitForm} className={clsx(styles, 'form', { hasText: inputValue })}>
         <label className='visually-hidden' htmlFor={searchId}>
@@ -43,9 +45,14 @@ export const Header = () => {
           value={inputValue}
         />
 
-        <button type='button' onClick={handleResetForm} className={clsx(styles, 'formSubmit')}>
-          <Icon className={clsx(styles, 'search')} name='search' size={24} />
-          <Icon className={clsx(styles, 'reset')} name='reset' size={24} />
+        <button
+          aria-label={buttonLabel}
+          type='button'
+          onClick={handleResetForm}
+          className={styles.formSubmit}
+        >
+          <Icon className={styles.search} name='search' />
+          <Icon className={styles.reset} name='reset' />
         </button>
       </form>
     </header>

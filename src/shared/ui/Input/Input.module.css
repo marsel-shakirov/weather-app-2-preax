@@ -7,21 +7,20 @@
   padding: 12px 16px;
   transition: 0.3s ease;
 
-  :focus {
+  &:focus {
     background-color: var(--color-neutral-200);
-  }
-
-  @media (hover: hover) {
-    :hover {
-      background-color: var(--color-neutral-200);
-    }
   }
 }
 
-/* @media screen and (max-width: 767px) {
+@media (hover: hover) {
+  .input:hover {
+    background-color: var(--color-neutral-200);
+  }
+}
+
+@media screen and (max-width: 767px) {
   .input {
     font-size: 14px;
-    line-height: 114%;
     padding: 8px 12px;
   }
-} */
+}

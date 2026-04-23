@@ -1,10 +1,6 @@
 /* @media screen and (max-width: 1279px) {
-  .content {
-		max-width: 960px;
-	}
-  .inputWrapper {
-    float: right;
-  }
+
+  
   .info {
     min-width: 374px;
     height: 408px;
@@ -20,20 +16,10 @@
 }
 
 @media screen and (max-width: 1023px) {
-  body {
-    padding: 24px;
-  }
-  .inputWrapper {
-    width: 601px;
-  }
-  .content {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-	}
-  .header {
-    padding: 24px;
-  }
+
+
+
+ 
   .headerLink {
     display: flex;
     align-items: center;
@@ -93,9 +79,7 @@
 }
 
 @media screen and (max-width: 885px) {
-  .inputWrapper {
-    width: 483px;
-  }
+  
   .forecastList {
     width: 100%;
     margin: 0 24px;
@@ -112,12 +96,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  body {
-    padding: 16px;
-  }
-  .header {
-    padding: 16px;
-  }
+  
+  
   .headerLink {
     width: 32px;
     height: 32px;
