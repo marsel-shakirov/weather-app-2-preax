@@ -3,9 +3,9 @@ import { clsx } from 'shared/utils';
 import styles from './Card.module.css';
 
 export const Card = (props) => {
-  const { title, icon, value, range, pressure, humidity, param, time } = props;
+  const { title, icon, value, position, pressure, humidity, param, time } = props;
 
-  const percent = 75;
+  const percent = position ?? 0;
 
   const progressStyle = {
     '--progress': `${percent}%`,
@@ -17,18 +17,29 @@ export const Card = (props) => {
       <figure className={styles.cardContent}>
         <figcaption className={styles.cardTitle}>{title}</figcaption>
 
-        <img
-          src={`${process.env.PUBLIC_URL}/static/images/png/cards-icon/${icon}.png`}
-          alt='icon'
-          className={styles.cardIcon}
-          width='32'
-          height='32'
-        />
+        <picture>
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/static/images/cards-icon/avif/${icon}.avif`}
+            type='image/avif'
+          />
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/static/images/cards-icon/webp/${icon}.webp`}
+            type='image/webp'
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}/static/images/cards-icon/${icon}.png`}
+            alt={icon}
+            className={styles.cardIcon}
+            width='32'
+            height='32'
+          />
+        </picture>
+
         <span className={styles.cardValue}>{value}</span>
       </figure>
 
       <div className={styles.cardFooter}>
-        {range && (
+        {position && (
           <div className={styles.progressBar} style={progressStyle}>
             <div className={styles.progressBarTrack} />
             <div className={clsx(styles, 'progressBarFill', { pressure })} />

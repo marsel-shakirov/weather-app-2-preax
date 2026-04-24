@@ -3,34 +3,23 @@ export const weatherData = [
     title: 'Влажность',
     icon: 'humidity',
     value: '75 %',
-    range: {
-      maskPosition: '78px',
-      leftValue: '75px',
-    },
-    valueRange: 75,
+    position: 53,
     humidity: true,
   },
   {
     title: 'Давление',
     icon: 'barometer',
     value: '761',
-    value2: 91,
     param: 'Повышенное',
+    position: 52,
     pressure: true,
-    range: {
-      maskPosition: '96px',
-      leftValue: '92px',
-    },
   },
   {
     title: 'Видимость',
     icon: 'visibility',
     value: '28 км',
     param: 'Нормальная',
-    range: {
-      maskPosition: '31px',
-      leftValue: '27px',
-    },
+    position: 12,
   },
   {
     title: 'Рассвет',
