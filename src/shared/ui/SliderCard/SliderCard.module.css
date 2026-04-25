@@ -1,0 +1,67 @@
+.forecastItem {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: var(--color-neutral-tone100);
+  color: var(--color-neutral-900);
+}
+
+.forecastTime {
+  display: block;
+}
+
+.forecastTemp {
+  display: block;
+}
+/* .flip {
+  -webkit-animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+} */
+
+/* #forecast-list-5days .forecastItem {
+  min-width: 275px;
+}
+
+#tab-5days:checked + .forecastTab::after {
+  right: 0;
+  left: auto;
+  width: 0;
+  opacity: 1;
+  animation: slide 1s forwards;
+} */
+/* 
+@-webkit-keyframes flip-cards {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-cards {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+} */

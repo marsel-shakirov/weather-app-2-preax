@@ -1,17 +1,23 @@
+import sliderCard24h from 'shared/api/mocks/slider-for-24h.json';
+import sliderCard5d from 'shared/api/mocks/slider-for-5days.json';
+
 import { useState } from 'react';
 
 import { clsx } from 'shared/utils';
 
-import { Icon } from 'shared/ui';
+import { Icon, SliderCard } from 'shared/ui';
+
 import styles from './Slider.module.css';
 
 const options = [
   { value: '24h', label: 'на 24 часа' },
-  { value: '2w', label: 'на 5 дней' },
+  { value: '5d', label: 'на 5 дней' },
 ];
 
 export const Slider = () => {
   const [range, setRange] = useState('24h');
+
+  const forecastData = range === '24h' ? sliderCard24h : sliderCard5d;
 
   const handleChangeRange = (currentRange) => {
     setRange(currentRange);
@@ -47,71 +53,15 @@ export const Slider = () => {
         <button className={styles.forecastBtn} aria-label='Предыдущий слайд' disabled>
           <Icon name='chevron' />
         </button>
-        <ul className={styles.forecastList} id='forecast-list-24h'></ul>
+        <ul className={styles.forecastList}>
+          {forecastData.map((item, index) => {
+            return <SliderCard key={`${item.datetime}-${index}`} {...item} />;
+          })}
+        </ul>
         <button className={styles.forecastBtn} aria-label='Следующий слайд'>
           <Icon name='chevron' />
         </button>
       </div>
-
-      {/* <div id='forecast-24h' className={styles.forecastContent}>
-        <button
-          id='btn-left-24h'
-          className={styles.forecastBtn}
-          aria-label='Previous 24 hours forecast'
-          disabled
-        >
-          <img
-            className={styles.btnIcon}
-            src='public/forecast-icon/btn-icon.svg'
-            alt='Previous button icon'
-            width='24'
-            height='24'
-          />
-        </button>
-        <ul className={styles.forecastList} id='forecast-list-24h'></ul>
-        <button
-          id='btn-right-24h'
-          className={styles.forecastBtn}
-          aria-label='Next 24 hours forecast'
-        >
-          <img
-            className={styles.btnIcon}
-            src='public/forecast-icon/btn-icon.svg'
-            alt='Next button icon'
-            width='24'
-            height='24'
-          />
-        </button>
-      </div>
-      <div id='forecast-5days' className={styles.forecastContent}>
-        <button
-          id='btn-left-5days'
-          className={styles.forecastBtn}
-          aria-label='Previous 5 days forecast'
-        >
-          <img
-            className={styles.btnIcon}
-            src='public/forecast-icon/btn-icon.svg'
-            alt='Previous button icon'
-            width='24'
-            height='24'
-          />
-        </button>
-        <ul className={styles.forecastList} id='forecast-list-5days'></ul>
-        <button
-          id='btn-right-5days'
-          className={styles.forecastBtn}
-          aria-label='Next 5 days forecast'
-        >
-          <img
-            className={styles.btnIcon}
-            src='public/forecast-icon/btn-icon.svg'
-            alt='Next button icon'
-            width='24'
-            height='24'
-          />
-        </button>
-      </div> */}
     </div>
   );
 };

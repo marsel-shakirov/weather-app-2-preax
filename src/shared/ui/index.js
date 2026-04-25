@@ -7,3 +7,5 @@ export { CityCard } from './CityCard/CityCard';
 export { Card } from './Card/Card';
 
 export { Icon } from './Icon/Icon';
+
+export { SliderCard } from './SliderCard/SliderCard';
