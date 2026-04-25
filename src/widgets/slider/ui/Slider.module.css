@@ -1,0 +1,199 @@
+/* SLIDER */
+.slider {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 32px;
+}
+
+.sliderMenu {
+  display: block;
+}
+
+.sliderMenuWrap {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+.sliderTitle {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.forecastTab {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-neutral-400);
+
+  &.active {
+    color: var(--color-neutral-100);
+  }
+}
+
+.forecastTab:has(.forecastRadio:focus-visible) {
+  outline-offset: 4px;
+  outline: 2px solid Highlight;
+}
+
+.forecastTab::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.forecastTab.active::after {
+  background-color: var(--color-neutral-100);
+}
+
+.forecastTab:has(.forecastRadio:checked)::after {
+  animation: slide 1s forwards;
+}
+
+.forecastContent {
+  display: flex;
+  column-gap: 32px;
+}
+
+.forecastList {
+  flex-grow: 1;
+}
+
+.forecastBtn {
+  display: flex;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--color-neutral-tone100);
+  color: var(--color-neutral-700);
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:last-child {
+    transform: rotate(180deg);
+  }
+}
+
+/* Switch-content */
+/* #tab-24h:checked ~ #forecast-24h,
+#tab-5days:checked ~ #forecast-5days {
+  display: flex;
+} */
+
+/* 
+
+#btn-right-24h .btnIcon,
+#btn-right-5days .btnIcon {
+  transform: rotate(180deg);
+}
+
+.forecastList {
+  max-width: 880px;
+  height: 64px;
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0 32px;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, #000 95%, transparent 100%);
+}
+
+.forecastItem {
+  width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: rgba(245, 244, 244, 0.4);
+  padding: 16px;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--color-neutral-900);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flip {
+  -webkit-animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+#forecast-list-5days .forecastItem {
+  min-width: 275px;
+} */
+
+/* #tab-5days:checked + .forecastTab::after {
+  right: 0;
+  left: auto;
+  width: 0;
+  opacity: 1;
+  animation: slide 1s forwards;
+} */
+
+/* @-webkit-keyframes flip-cards {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-cards {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+} */
+
+@keyframes slide {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .forecastTab:not(.active):hover {
+    color: var(--color-neutral-400);
+    &::after {
+      background-color: var(--color-neutral-400);
+      animation: slide 1s forwards;
+    }
+  }
+
+  .forecastBtn:not(:disabled):hover {
+    background-color: var(--color-neutral-200);
+  }
+}

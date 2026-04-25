@@ -1,1 +1,0 @@
-export { weatherData } from './weatherDate';

@@ -1,5 +1,5 @@
 import { CityCard } from 'shared/ui';
-import { CardList } from 'widgets';
+import { CardList, Slider } from 'widgets';
 
 import styles from './MainPage.module.css';
 
@@ -14,6 +14,7 @@ export const MainPage = () => {
       </section>
       <section className={styles.weatherWidget}>
         <h2 className='visually-hidden'>Прогноз погоды</h2>
+        <Slider />
       </section>
     </main>
   );

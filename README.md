@@ -34,6 +34,8 @@ Task 1: Marsel, marsel-shakirov
    1.6 Чуть больше поддержки accessibility
 2. Header
    2.1 В input search убрал aria-label и связал с label
-   2.2 input имеет правильный hover, focus, pressed
+   2.2 input теперь имеет правильный hover, focus, pressed
 3. Main
-   3.1 Добавил тег time для дат и времени
+   3.1 Добавил больше семантических тегов
+   3.2 Заменил cards-icon c svg на png так как это не “настоящая векторная иконка”, а SVG-контейнер с встроенным PNG
+   3.3 Пофиксил progressBar
