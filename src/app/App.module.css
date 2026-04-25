@@ -1,7 +1,6 @@
 .content {
   flex-grow: 1;
   max-width: 1120px;
-  min-height: 860px;
   margin: auto;
   border-radius: 8px;
   background: var(--color-neutral-tone600);

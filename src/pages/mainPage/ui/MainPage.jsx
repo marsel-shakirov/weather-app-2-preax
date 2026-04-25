@@ -1,5 +1,5 @@
-import { CityCard } from 'shared/ui';
-import { CardList, Slider } from 'widgets';
+import { CardList, CityCard } from 'shared/ui';
+import { Slider } from 'widgets';
 
 import styles from './MainPage.module.css';
 

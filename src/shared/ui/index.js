@@ -9,3 +9,5 @@ export { Card } from './Card/Card';
 export { Icon } from './Icon/Icon';
 
 export { SliderCard } from './SliderCard/SliderCard';
+
+export { CardList } from './CardList/CardList';

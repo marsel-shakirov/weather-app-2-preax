@@ -1,4 +1,4 @@
-import { Header } from 'widgets';
+import { Footer, Header } from 'widgets';
 
 import { MainPage } from 'pages';
 
@@ -11,7 +11,7 @@ export const App = () => {
     <div className={clsx(styles, 'content')}>
       <Header />
       <MainPage />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
