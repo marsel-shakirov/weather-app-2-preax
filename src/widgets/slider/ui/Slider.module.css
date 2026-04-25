@@ -17,11 +17,9 @@
 }
 
 .sliderTitle {
-  display: block;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 24px;
-  line-height: 133%;
+  line-height: 1.33;
 }
 
 .forecastTab {
@@ -60,12 +58,6 @@
   animation: slide 1s forwards;
 }
 
-.forecastContent {
-  display: flex;
-  align-items: center;
-  column-gap: 32px;
-}
-
 .forecastBtn {
   display: flex;
   border: 0;
@@ -85,13 +77,28 @@
   }
 }
 
+.forecastContent {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+.forecastWrap {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+  min-height: 64px;
+  mask-image: linear-gradient(90deg, #000 95%, transparent 100%);
+}
+
 .forecastList {
   display: flex;
-  flex-grow: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   column-gap: 16px;
   list-style: none;
-  overflow-x: hidden;
-  mask-image: linear-gradient(90deg, #000 95%, transparent 100%);
 }
 
 @keyframes slide {
@@ -115,5 +122,67 @@
 
   .forecastBtn:not(:disabled):hover {
     background-color: var(--color-neutral-200);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .slider {
+    row-gap: 24px;
+    padding: 24px;
+  }
+  .sliderMenuWrap {
+    column-gap: 24px;
+  }
+  .forecastContent {
+    column-gap: 24px;
+  }
+  .forecastList {
+    column-gap: 12px;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .forecastWrap {
+    min-height: 136px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    row-gap: 16px;
+    padding: 16px;
+  }
+
+  .sliderMenuWrap {
+    column-gap: 16px;
+  }
+
+  .sliderTitle {
+    font-size: 16px;
+  }
+  .forecastContent {
+    column-gap: 16px;
+  }
+
+  .forecastTab {
+    font-size: 12px;
+  }
+
+  .forecastBtn {
+    padding: 8px 12px;
+  }
+
+  .forecastWrap {
+    min-height: 46px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .forecastWrap {
+    min-height: 104px;
+  }
+
+  .forecastList {
+    column-gap: 8px;
   }
 }

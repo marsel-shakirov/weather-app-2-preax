@@ -11,13 +11,40 @@
   color: var(--color-neutral-900);
 }
 
-.forecastTime {
+@media screen and (max-width: 885px) {
+  .forecastItem {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .forecastItem {
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  .forecastIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .forecastItem {
+    flex-direction: column;
+  }
+}
+
+/* .forecastTime {
   display: block;
 }
 
 .forecastTemp {
   display: block;
-}
+} */
 /* .flip {
   -webkit-animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: flip-cards 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;

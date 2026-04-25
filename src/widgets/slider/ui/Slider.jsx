@@ -53,11 +53,13 @@ export const Slider = () => {
         <button className={styles.forecastBtn} aria-label='Предыдущий слайд' disabled>
           <Icon name='chevron' />
         </button>
-        <ul className={styles.forecastList}>
-          {forecastData.map((item, index) => {
-            return <SliderCard key={`${item.datetime}-${index}`} {...item} />;
-          })}
-        </ul>
+        <div className={styles.forecastWrap}>
+          <ul className={styles.forecastList}>
+            {forecastData.map((item, index) => {
+              return <SliderCard key={`${item.datetime}-${index}`} {...item} />;
+            })}
+          </ul>
+        </div>
         <button className={styles.forecastBtn} aria-label='Следующий слайд'>
           <Icon name='chevron' />
         </button>

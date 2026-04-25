@@ -28,7 +28,7 @@ export const Card = (props) => {
           />
           <img
             src={`${process.env.PUBLIC_URL}/static/images/cards-icon/${icon}.png`}
-            alt={icon}
+            alt={title}
             className={styles.cardIcon}
             width='32'
             height='32'
