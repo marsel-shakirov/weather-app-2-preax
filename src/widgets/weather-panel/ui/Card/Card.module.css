@@ -70,25 +70,25 @@
   position: absolute;
   width: 100%;
   border-radius: 8px;
-  background: var(--color-neutral-tone200);
+  background-color: var(--color-neutral-tone200);
 
   -webkit-mask-image: radial-gradient(
     circle 6px at var(--mask-position) 50%,
     transparent 98%,
-    rgba(218, 218, 218, 0.4) 98%
+    var(--color-neutral-tone200) 100%
   );
 
   mask-image: radial-gradient(
     circle 6px at var(--mask-position) 50%,
     transparent 98%,
-    rgba(218, 218, 218, 0.4) 98%
+    var(--color-neutral-tone200) 100%
   );
 
   &.pressure {
     background: radial-gradient(
       circle,
       rgba(84, 84, 84, 0.4),
-      rgba(138, 138, 138, 0.4) 45.123%,
+      rgba(138, 138, 138, 0.4) 55%,
       rgb(218, 218, 218) 100%,
       rgba(218, 218, 218, 0.4) 100%
     );
@@ -150,12 +150,12 @@
     -webkit-mask-image: radial-gradient(
       circle 6px at var(--mask-position) 50%,
       transparent 98%,
-      rgba(218, 218, 218, 0.4) 98%
+      var(--color-neutral-tone200) 98%
     );
     mask-image: radial-gradient(
       circle 6px at var(--mask-position) 50%,
       transparent 75%,
-      rgba(218, 218, 218, 0.4) 75%
+      var(--color-neutral-tone200) 75%
     );
   }
 

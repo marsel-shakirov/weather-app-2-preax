@@ -1,6 +1,6 @@
 import weatherCards from 'shared/api/mocks/weather-cards.json';
 
-import { Card } from 'shared/ui';
+import { Card } from '../Card/Card';
 
 import styles from './CardList.module.css';
 
