@@ -7,13 +7,14 @@ body {
   display: flex;
   padding-block: 32px;
   padding-inline: 80px;
+  min-height: 100dvh;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
   font-family: var(--font-family);
   font-variant-numeric: lining-nums;
   color: var(--color-neutral-100);
-  background: url('../../shared/assets/images/jpg/background-dekstop.jpg') no-repeat;
+  background: url('../../shared/assets/images/jpg/background-desktop.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
