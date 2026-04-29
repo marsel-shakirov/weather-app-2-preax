@@ -4,6 +4,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   padding-block: 32px;
   padding-inline: 80px;
@@ -20,8 +21,16 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: url('../../shared/assets/images/jpg/background-desktop.jpg') center / cover
-      no-repeat;
+
+    /* background-image: url('../../shared/assets/images/jpg/background-desktop.jpg'); */
+
+    background-image: image-set(
+      url('../../shared/assets/images/jpg/background-desktop.avif') type('image/avif'),
+      url('../../shared/assets/images/jpg/background-desktop.webp') type('image/webp')
+    );
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   @media screen and (max-width: 1279px) {
