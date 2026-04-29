@@ -55,7 +55,7 @@ export const Card = (props) => {
         ) : (
           <div>
             <span>
-              {param}&nbsp;{time}
+              {param} {time}
             </span>
           </div>
         )}

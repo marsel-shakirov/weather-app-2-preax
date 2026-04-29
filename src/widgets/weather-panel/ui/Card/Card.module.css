@@ -174,3 +174,10 @@
     width: 98px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 85px;
+    justify-content: center;
+  }
+}
