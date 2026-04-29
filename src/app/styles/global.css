@@ -22,13 +22,13 @@ body {
     inset: 0;
     z-index: -1;
 
-    /* background-image: url('../../shared/assets/images/jpg/background-desktop.jpg'); */
+    background-image: url('../../shared/assets/images/jpg/background-desktop.jpg');
 
     background-image: image-set(
       url('../../shared/assets/images/jpg/background-desktop.avif') type('image/avif'),
       url('../../shared/assets/images/jpg/background-desktop.webp') type('image/webp')
     );
-    background-position: fixed;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
