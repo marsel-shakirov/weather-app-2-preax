@@ -45,3 +45,9 @@
     height: 32px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .logoHeader {
+    padding-right: 8px;
+  }
+}
